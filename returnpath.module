@@ -25,7 +25,7 @@ function returnpath_help($path, $arg) {
  * Replaces the default user_mail() and adds the sendmail -f command to the PHP mail() call.
  */
 function drupal_mail_wrapper($message) {
-  unset($messages['headers']['From']);
+  unset($messages['headers']['Errors-To']);
 
   $mimeheaders = array();
   foreach ($message['headers'] as $name => $value) {
